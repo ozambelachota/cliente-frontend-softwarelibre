@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-sm-4 offset-md-4 ">
+        <div class="card card-body my-10">
+            <form (submit)="crearCliente()" [formGroup]="formCliente">
+                <h1>Crear cliente</h1>
+                <div class="form-group mb-2">
+                    <input type="text" formControlName="nombre"  class="form-control"  placeholder="nombre completo" autofocus />
+                </div>
+                <div class="form-group mb-2">
+                    <input type="text" formControlName="direccion"  class="form-control" placeholder="ingrese direccion " />
+                </div>
+                <div class="form-group mb-2">
+                    fecha de nacimiento
+                    <input type="date" formControlName="fecha"  class="form-control" />
+                </div>
+                <div class="form-group mb-2">
+                    <input type="text" formControlName="telefono"  class="form-control"  placeholder="ingrese numero de telefono" />
+                </div>
+                <div class="form-group mb-2">
+                    <input type="email" formControlName="correo"  class="form-control" placeholder=" ingrese correo" />
+                </div>
+              <button [disabled]="!formCliente.valid" class="btn btn-primary btn-block">REGISTRAR</button>  
+            </form>
+        </div>
+    </div>
+
+</div>
