@@ -17,11 +17,11 @@
         <tbody *ngFor="let cliente of clientes">
           <tr class="table-active">
             <td>{{cliente.idCliente}}</td>
-            <td>{{cliente.nombreCompleto}}</td>
+            <td>{{cliente.nombreCompleto | uppercase }}</td>
             <td>{{cliente.direccion}}</td>
             <td>{{cliente.telefono}}</td>
             <td>{{cliente.correo}}</td>
-            <td>{{cliente.fechaNacimiento | date: "EEE d, MMM yyyy":undefined :'es' }}</td>
+            <td>{{cliente.fechaNacimiento | date: "d MMM, y":undefined :'es' }}</td>
             <td *ngIf="cliente.idCliente != null || cliente.idCliente !=0">
               <button class="btn btn-secondary mx-2">editar</button>
               <button class="btn btn-danger" (click)="eliminarCliente(cliente.idCliente)">eliminar</button>
