@@ -1,8 +1,12 @@
 <div class="row">
     <div class="col-sm-4 offset-md-4 ">
-        <div class="card card-body my-10">
-            <form (submit)="crearCliente()" [formGroup]="formCliente">
+        <div class="card">
+            <div class="card-header">
                 <h1>Crear cliente</h1>
+            </div>
+        <div class="card-body my-10">
+            
+            <form (submit)="crearCliente()" [formGroup]="formCliente">
                 <div class="form-group mb-2">
                     <input type="text" formControlName="nombre"  class="form-control"  placeholder="nombre completo" autofocus />
                 </div>
@@ -22,6 +26,6 @@
               <button [disabled]="!formCliente.valid" class="btn btn-primary btn-block">REGISTRAR</button>  
             </form>
         </div>
-    </div>
-
+        </div>
+   
 </div>
